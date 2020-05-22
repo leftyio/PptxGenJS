@@ -1,4 +1,4 @@
-/* PptxGenJS 3.3.0-beta @ 2020-05-22T03:58:13.250Z */
+/* PptxGenJS 3.3.0-beta @ 2020-05-22T15:58:15.416Z */
 import * as JSZip from 'jszip';
 
 /**
@@ -2389,7 +2389,7 @@ function genXmlTextBody(slideObj) {
             // Add paragraphProperties right after <p> before textrun(s) begin
             strSlideXml += '<a:p>' + paragraphPropXml;
         }
-        else if (idx > 0 && (typeof textObj.options.bullet !== 'undefined' || typeof textObj.options.align !== 'undefined')) {
+        else if (idx > 0 && (typeof textObj.options.breakLine === 'undefined' || textObj.options.breakLine === true) && (typeof textObj.options.bullet !== 'undefined' || typeof textObj.options.align !== 'undefined')) {
             strSlideXml += '</a:p><a:p>' + paragraphPropXml;
         }
         // C: Inherit any main options (color, fontSize, etc.)
