@@ -7,8 +7,9 @@ bower_components/
 .icloud
 *.icloud
 /.idea
-website/
-demo/
-docs/
-.rpt2_cache
+/website
+/demo
+/demo-react
+/docs
+/.rpt2_cache
 src/bld
